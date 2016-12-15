@@ -17,7 +17,7 @@ import static wormgame.Direction.UP;
 
 /**
  *
- * @author mahdiaza
+ * @author Martin Anderson
  */
 public class Worm {
     private int originalX;

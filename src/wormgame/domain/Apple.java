@@ -7,7 +7,7 @@ package wormgame.domain;
 
 /**
  *
- * @author mahdiaza
+ * @author Martin Anderson
  */
 public class Apple extends Piece{
 

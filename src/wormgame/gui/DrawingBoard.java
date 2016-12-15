@@ -15,7 +15,7 @@ import wormgame.game.WormGame;
 
 /**
  *
- * @author mahdiaza
+ * @author Martin Anderson
  */
 public class DrawingBoard extends JPanel implements Updatable{
     private WormGame wormgame;

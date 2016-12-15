@@ -12,7 +12,7 @@ import wormgame.domain.Worm;
 
 /**
  *
- * @author mahdiaza
+ * @author Martin Anderson
  */
 public class KeyboardListener implements KeyListener{
     private Worm worm;
