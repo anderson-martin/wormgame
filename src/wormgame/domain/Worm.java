@@ -110,8 +110,14 @@ public class Worm {
         
     }
     public boolean runsIntoBorder(int width, int height){
-        Piece head = this.pieces.get(this.pieces.size()-1);
-        return (head.getX() == width) || (head.getX() == 0) || (head.getY() == height) || (head.getY() == 0);
+
+        
+        for (Piece each : this.pieces) {
+            if((each.getX() == width) || (each.getX() == 0) || (each.getY() == height) || (each.getY() == 0)) {
+                return true;
+            }
+        }
+        return false;
     }
     
     public int getX(){

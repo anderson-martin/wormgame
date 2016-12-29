@@ -1,11 +1,8 @@
 package wormgame;
 
 
-import java.awt.event.KeyEvent;
 import javax.swing.SwingUtilities;
-import wormgame.domain.Worm;
 import wormgame.gui.UserInterface;
-import wormgame.gui.KeyboardListener;
 import wormgame.game.WormGame;
 
 public class Main {

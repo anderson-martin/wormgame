@@ -41,8 +41,7 @@ public class UserInterface implements Runnable {
         KeyboardListener keyboardlistener = new KeyboardListener(this.game.getWorm());
         frame.addKeyListener(keyboardlistener);
 
-        // Create drawing board first which then is added into container-object.
-        // After this, create keyboard listener which is added into frame-object
+
     }
 
     public Updatable getUpdatable(){

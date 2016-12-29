@@ -20,12 +20,10 @@ public class WormGame extends Timer implements ActionListener {
     private Apple apple;
     
     public WormGame(int width, int height) {
-        super(1000, null);
-        
+        super(1000, null);        
         this.width = width;
         this.height = height;
-        this.continues = true;
-        
+        this.continues = true;        
         addActionListener(this);
         setInitialDelay(2000);
         this.worm = new Worm(width/2, height/2, Direction.DOWN);
@@ -100,15 +98,19 @@ public class WormGame extends Timer implements ActionListener {
     
     @Override
     public void actionPerformed(ActionEvent ae) {
+        if(!continues){
+            return;
+        }
+        
         this.worm.move();
         if(this.worm.runsInto(apple)){
             this.worm.grow();
             this.apple = RandomAppleCreator(width, height);
-        } else if (this.worm.runsIntoItself()){
+        } 
+        
+        if (this.worm.runsIntoItself() || this.worm.runsIntoBorder(width, height)){
             this.continues = false;
-        } else if (this.worm.runsIntoBorder(width, height)){
-            this.continues = false;
-        }
+        } 
         updatable.update();
         setDelay(1000 / worm.getLength());
         
